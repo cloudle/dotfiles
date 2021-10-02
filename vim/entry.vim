@@ -12,6 +12,25 @@ map <silent> <C-n> :NERDTreeToggle<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>m :NERDTreeFind<CR>
 
+" Nice remap
+nnoremap n nzzzv " nagivate to definition keep cursor position at center
+nnoremap N Nzzzv 
+nnoremap J mzJ`z " keep cursor on the original position after concat lines 
+nnoremap H Hzz
+nnoremap L Lzz
+" Break points for undo
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+" Moving text up and down
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+inoremap <C-j> <esc>:m .+1<CR>==i
+inoremap <C-k> <esc>:m .-2<CR>==i
+nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>k :m .-2<CR>==
+
 " Remap split navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -21,6 +40,12 @@ nnoremap <C-l> <C-w>l
 " Switch split layout between horizontal and vertical
 map <leader>th <C-w>t<C-w>H
 map <leader>tk <C-w>t<C-w>K
+
+" From visual-split
+" <C-W>gr <- Resize splits
+" <C-W>gss <- Split selected part
+" <C-W>gsa <- Split above
+" <C-W>gsb <- Split bellow
 
 nmap <leader>1 <Plug>lightline#bufferline#go(1)
 nmap <leader>2 <Plug>lightline#bufferline#go(2)

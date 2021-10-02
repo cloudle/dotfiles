@@ -33,6 +33,12 @@ nmap <leader>8 <Plug>lightline#bufferline#go(8)
 nmap <leader>9 <Plug>lightline#bufferline#go(9)
 nmap <leader>0 <Plug>lightline#bufferline#go(10)
 
+" Visual slits
+xmap <C-W>gr  <Plug>(Visual-Split-VSResize)
+xmap <C-W>gss <Plug>(Visual-Split-VSSplit)
+xmap <C-W>gsa <Plug>(Visual-Split-VSSplitAbove)
+xmap <C-W>gsb <Plug>(Visual-Split-VSSplitBelow)
+
 " Remap split reszie
 nnoremap <silent> <C-o> :vertical resize +3<CR>
 nnoremap <silent> <C-p> :vertical resize -3<CR>
@@ -44,6 +50,8 @@ nnoremap <leader>v :split<CR>
 nnoremap <leader>s :vsplit<CR>
 
 " File and window management
+inoremap <leader>q <ESC>:q<CR>
+nnoremap <leader>q <ESC>:q<CR>
 inoremap <leader>w <ESC>:w<CR>
 nnoremap <leader>w :w<CR>
 inoremap <leader>x <ESC>:x<CR>

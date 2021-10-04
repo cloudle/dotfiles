@@ -6,6 +6,7 @@ source ~/dotfiles/vim/theme.vim
 
 let mapleader=","
 set mouse=a
+set cursorline
 set relativenumber
 :set noet ci pi sts=0 sw=2 ts=2
 set list
@@ -17,8 +18,8 @@ nnoremap <leader>m :NERDTreeFind<CR>
 
 " Nice remap
 nnoremap n nzzzv " nagivate to definition keep cursor position at center
-nnoremap N Nzzzv 
-nnoremap J mzJ`z " keep cursor on the original position after concat lines 
+nnoremap N Nzzzv
+nnoremap J mzJ`z " keep cursor on the original position after concat lines
 nnoremap H Hzz
 nnoremap L Lzz
 " Break points for undo

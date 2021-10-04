@@ -22,6 +22,8 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'jparise/vim-graphql'
+  Plug 'cespare/vim-toml'
+  Plug 'editorconfig/editorconfig-vim'
 
   Plug 'joshdick/onedark.vim'
   Plug 'itchyny/lightline.vim'

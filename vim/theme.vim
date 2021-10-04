@@ -21,8 +21,10 @@ let g:lightline = {
   \   'separator': { 'left': '', 'right': '', },
   \   'subseparator': { 'left': '', 'right': '', },
   \   'active': {
-  \     'left': [ [ 'left_end', 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
-  \     'right': [ ['lineinfo',  'method', 'spell', 'method', 'right_end' ], [  'fileencoding', 'fileformat', 'filetype', 'cocstatus'] ],
+  \     'left': [ [ 'left_end', 'mode', 'paste' ], 
+  \               [ 'cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+  \     'right': [ ['lineinfo',  'method', 'spell', 'method', 'right_end' ], 
+  \                [  'fileencoding', 'fileformat', 'filetype', 'cocstatus'] ],
   \   },
   \   'tabline': {
   \     'left': [ ['buffers'] ],

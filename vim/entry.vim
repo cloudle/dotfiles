@@ -7,6 +7,9 @@ source ~/dotfiles/vim/theme.vim
 let mapleader=","
 set mouse=a
 set relativenumber
+:set noet ci pi sts=0 sw=2 ts=2
+set list
+set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,precedes:«,extends:»
 
 map <silent> <C-n> :NERDTreeToggle<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
@@ -73,10 +76,10 @@ inoremap <leader>q <ESC>:q<CR>
 nnoremap <leader>q <ESC>:q<CR>
 inoremap <leader>w <ESC>:w<CR>
 nnoremap <leader>w :w<CR>
-inoremap <leader>x <ESC>:x<CR>
-nnoremap <leader>x :x<CR>
+inoremap <leader>x <ESC>:bd<CR>
+nnoremap <leader>x :bd<CR>
 
-nnoremap <leader>o :Files<CR>
-inoremap <leader>o :Files<CR>
+nnoremap <leader>o :ProjectFiles<CR>
+inoremap <leader>o :ProjectFiles<CR>
 nnoremap <leader>i :Rg<CR>
 inoremap <leader>i :Rg<CR>

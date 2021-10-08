@@ -6,6 +6,9 @@ set ideajoin
 set surround
 set NERDTree
 
+nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>m :NERDTreeFind<CR>
+
 " Nice remap
 nnoremap n nzzzv " nagivate to definition keep cursor position at center
 nnoremap N Nzzzv
@@ -26,6 +29,21 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" Split resize
+nnoremap <silent> <C-o> :action StretchSplitToLeft<CR>
+nnoremap <silent> <C-p> :action StretchSplitToRight<CR>
+
 " Split
 nnoremap <leader>v :split<CR>
 nnoremap <leader>s :vsplit<CR>
+
+" File and window management
+inoremap <leader>w <ESC>:w<CR>
+nnoremap <leader>w :w<CR>
+
+nnoremap <leader>o :action GotoFile<CR>
+inoremap <leader>o <ESC>:action GotoFile<CR>
+nnoremap <leader>i :action GotoSymbol<CR>
+inoremap <leader>i <ESC>:action GotoSymbol<CR>
+nnoremap <leader>u :action GotoClass<CR>
+inoremap <leader>u <ESC>:action GotoClass<CR>

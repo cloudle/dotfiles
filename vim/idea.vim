@@ -3,6 +3,10 @@ set scrolloff = 5
 set relativenumber
 set idearefactormode = keep
 set ideajoin
+set highlightedyank
+set easymotion
+set multiple-cursors
+set commentary
 set surround
 set NERDTree
 
@@ -10,17 +14,15 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>m :NERDTreeFind<CR>
 
 " Nice remap
-nnoremap n nzzzv " nagivate to definition keep cursor position at center
-nnoremap N Nzzzv
-nnoremap J mzJ`z " keep cursor on the original position after concat lines
 nnoremap H Hzz
 nnoremap L Lzz
+
 " Moving text up and down
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 inoremap <C-j> <esc>:m .+1<CR>==i
 inoremap <C-k> <esc>:m .-2<CR>==i
-nnoremap <leader> :m .+1<CR>==
+nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
 
 " Remap split navigation
@@ -41,6 +43,8 @@ nnoremap <leader>s :vsplit<CR>
 inoremap <leader>w <ESC>:w<CR>
 nnoremap <leader>w :w<CR>
 
+nnoremap <leader>p :action ManageRecentProjects<CR>
+inoremap <leader>p <ESC>:action ManageRecentProjects<CR>
 nnoremap <leader>o :action GotoFile<CR>
 inoremap <leader>o <ESC>:action GotoFile<CR>
 nnoremap <leader>i :action GotoSymbol<CR>

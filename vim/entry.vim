@@ -17,7 +17,7 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>m :NERDTreeFind<CR>
 
 " Nice remap
-nnoremap n nzzzv " nagivate to definition keep cursor position at center
+nnoremap n nzzzv " navigate to definition keep cursor position at center
 nnoremap N Nzzzv
 nnoremap J mzJ`z " keep cursor on the original position after concat lines
 nnoremap H Hzz
@@ -62,7 +62,7 @@ nmap <leader>8 <Plug>lightline#bufferline#go(8)
 nmap <leader>9 <Plug>lightline#bufferline#go(9)
 nmap <leader>0 <Plug>lightline#bufferline#go(10)
 
-" Remap split reszie
+" Remap split resize
 nnoremap <silent> <C-o> :vertical resize +3<CR>
 nnoremap <silent> <C-p> :vertical resize -3<CR>
 "nnoremap <silent> <C-]> :resize +3<CR>
@@ -84,3 +84,7 @@ nnoremap <leader>o :ProjectFiles<CR>
 inoremap <leader>o :ProjectFiles<CR>
 nnoremap <leader>i :Rg<CR>
 inoremap <leader>i :Rg<CR>
+
+map / <Plug>(incsearch-easymotion-/)
+map ? <Plug>(incsearch-easymotion-?)
+map g/ <Plug>(incsearch-easymotion-stay)

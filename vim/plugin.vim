@@ -10,9 +10,14 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-commentary'
   Plug 'airblade/vim-gitgutter'
   Plug 'jiangmiao/auto-pairs'
-  Plug 'tpope/vim-surround'
+  Plug 'easymotion/vim-easymotion'
+  Plug 'haya14busa/incsearch.vim'
+  Plug 'haya14busa/incsearch-fuzzy.vim'
+  Plug 'haya14busa/incsearch-easymotion.vim'
 
   Plug 'ryanoasis/vim-devicons' " file icons for nerdtree
   Plug 'preservim/nerdtree' |

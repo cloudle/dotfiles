@@ -42,6 +42,8 @@ nnoremap <leader>s :vsplit<CR>
 " File and window management
 inoremap <leader>w <ESC>:w<CR>
 nnoremap <leader>w :w<CR>
+inoremap <leader>q <ESC>:q<CR>
+nnoremap <leader>q :q<CR>
 
 nnoremap <leader>p :action ManageRecentProjects<CR>
 inoremap <leader>p <ESC>:action ManageRecentProjects<CR>

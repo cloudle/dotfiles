@@ -12,51 +12,18 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 let g:onedark_hide_endofbuffer=0
 let g:onedark_terminal_italics=1
 let g:onedark_termcolors=256
-let g:onedark_color_overrides = {
-	\ "black": {"gui": "#272c33", "cterm": "0", "cterm16": "0" }
-	\}
+let g:onedark_color_overrides = { "black": {"gui": "#272c33", "cterm": "0", "cterm16": "0" } }
 
-let g:lightline = {
-  \   'colorscheme': 'onedark',
-  \   'separator': { 'left': '', 'right': '', },
-  \   'subseparator': { 'left': '', 'right': '', },
-  \   'active': {
-  \     'left': [ [ 'left_end', 'mode', 'paste' ],
-  \               [ 'cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified' ] ],
-  \     'right': [ ['lineinfo',  'method', 'spell', 'method', 'right_end' ],
-  \                [  'fileencoding', 'fileformat', 'filetype', 'cocstatus'] ],
-  \   },
-  \   'tabline': {
-  \     'left': [ ['buffers'] ],
-  \     'right': [ ['close'] ]
-  \   },
-  \   'component': {
-  \     'left_end': '%#LightlineLeft_active_0_1#%#LightlineLeft_active_0#',
-  \     'right_end': '%#LightlineRight_active_0_1#%#LightlineRight_active_0#',
-  \     'lineinfo': ' %3l:%-2v',
-  \   },
-  \   'component_visible_condition': { 'left_end': '0', 'right_end': '0', },
-  \   'component_expand': {
-  \     'buffers': 'lightline#bufferline#buffers',
-  \   },
-  \   'component_type': {
-  \     'buffers': 'tabsel'
-  \   },
-  \   'component_function': {
-  \     'gitbranch': 'GitBranchWithIcon',
-  \   }
-  \ }
-
-set showtabline=2
-let g:lightline.component_raw = { 'buffers': 1, 'left_end': 1, 'right_end': 1 }
-let g:lightline#bufferline#enable_devicons=1
-let g:lightline#bufferline#enable_nerdfont=1
-let g:lightline#bufferline#unicode_symbols=1
-let g:lightline#bufferline#show_number=2
-let g:lightline#bufferline#clickable=1
-let g:lightline#bufferline#number_map = {
-\ 0: '⁰', 1: '¹', 2: '²', 3: '³', 4: '⁴',
-\ 5: '⁵', 6: '⁶', 7: '⁷', 8: '⁸', 9: '⁹'}
+let active_left = [['mode', 'paste'], ['cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified']]
+let active_right = [['lineinfo', 'method', 'spell'], ['fileencoding', 'fileformat']]
+let g:lightline = {}
+let g:lightline.colorscheme = 'onedark'
+let g:lightline.active = { 'left': active_left, 'right': active_right }
+let g:lightline.component = { 'lineinfo': ' %3l:%-2v' }
+let g:lightline.component_function = { 'gitbranch': 'GitBranchWithIcon' }
+let g:lightline.separator = { 'left': '', 'right': '', }
+let g:lightline.subseparator = { 'left': '', 'right': '', }
+" set showtabline=2
 
 function! GitBranchWithIcon()
 	return ' ' . fugitive#head()
@@ -77,3 +44,4 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
+

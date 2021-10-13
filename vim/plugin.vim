@@ -32,7 +32,6 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'joshdick/onedark.vim'
   Plug 'itchyny/lightline.vim'
-  Plug 'mengelbrecht/lightline-bufferline'
   Plug 'wellle/visual-split.vim'
   Plug 'mhinz/vim-startify'
 call plug#end()

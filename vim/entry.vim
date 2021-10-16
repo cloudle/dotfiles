@@ -1,8 +1,3 @@
-source ~/dotfiles/vim/plugin.vim
-source ~/dotfiles/vim/plugin-configure.vim
-source ~/dotfiles/vim/completion.vim
-source ~/dotfiles/vim/theme.vim
-
 let mapleader=","
 set mouse=a
 set cursorline
@@ -10,6 +5,12 @@ set relativenumber
 set noet ci pi sts=0 sw=2 ts=2
 set list
 set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,precedes:«,extends:»
+
+source ~/dotfiles/vim/plugin.vim
+source ~/dotfiles/vim/plugin-configure.vim
+source ~/dotfiles/vim/fzf.vim
+source ~/dotfiles/vim/completion.vim
+source ~/dotfiles/vim/theme.vim
 
 map <silent> <C-n> :NERDTreeToggle<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
@@ -59,10 +60,6 @@ nnoremap <silent> <C-p> :vertical resize -3<CR>
 "nnoremap <silent> <C-]> :resize +3<CR>
 "nnoremap <silent> <C-[> :resize -3<CR>
 
-" Open Tab
-nnoremap <leader>v :split<CR>
-nnoremap <leader>s :vsplit<CR>
-
 " File and window management
 inoremap <leader>q <ESC>:q<CR>
 nnoremap <leader>q <ESC>:q<CR>
@@ -75,6 +72,8 @@ nnoremap <leader>o :ProjectFiles<CR>
 inoremap <leader>o :ProjectFiles<CR>
 nnoremap <leader>i :Rg<CR>
 inoremap <leader>i :Rg<CR>
+nnoremap <leader>u :History<CR>
+inoremap <leader>u :History<CR>
 
 map / <Plug>(incsearch-easymotion-/)
 map ? <Plug>(incsearch-easymotion-?)

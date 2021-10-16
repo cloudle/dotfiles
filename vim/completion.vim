@@ -1,3 +1,13 @@
+let g:coc_global_extensions = [
+
+  \ 'coc-spell-checker',
+  \ 'coc-json',
+  \ 'coc-tsserver',
+  \ 'coc-eslint',
+  \ 'coc-prettier',
+  \ 'coc-rust-analyzer',
+  \ ]
+
 set hidden " TextEdit might fail if hidden is not set.
 
 set nobackup " Some servers have issues with backup files, see #649.

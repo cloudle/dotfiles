@@ -52,7 +52,6 @@ map <leader>tk <C-w>t<C-w>K
 
 vmap <leader>a <Plug>(coc-codeaction-selected)
 nmap <leader>a <Plug>(coc-codeaction-selected)
-"source ~/dotfiles/vim/global-config.vim
 
 " Remap split resize
 nnoremap <silent> <C-o> :vertical resize +3<CR>

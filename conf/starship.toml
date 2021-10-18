@@ -1,0 +1,29 @@
+# Replace the "❯" symbol in the prompt with "➜"
+[character]                            # The name of the module we are configuring is "character"
+success_symbol = "[](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+error_symbol = "[](bold red)"
+vicmd_symbol = "[](bold green)"
+#   
+
+[git_branch]
+symbol = " "
+
+[nodejs]
+format = "[ $version](bold green) "
+
+[package]
+format = "[$symbol$version]($style) " 
+symbol = " "
+
+[aws]
+format = "[$symbol($profile)($region)](bold yellow) "
+symbol = " "
+[aws.region_aliases]
+us-east-1 = "n. virginia"
+us-east-2 = "ohio"
+ap-southeast-1 = "singapore"
+ap-southeast-2 = "tokyo"
+
+[gcloud]
+format = "[$symbol$account](bold blue) "
+symbol = " "

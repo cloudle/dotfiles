@@ -1,4 +1,10 @@
 syntax on
+
+let g:onedark_hide_endofbuffer=0
+let g:onedark_terminal_italics=1
+let g:onedark_termcolors=256
+let g:onedark_color_overrides = { "black": {"gui": "#272c33", "cterm": "0", "cterm16": "0" } }
+
 colorscheme onedark
 
 " Tweaks for file browsing
@@ -8,11 +14,6 @@ let g:netrw_altv=1 " open splits to the right
 let g:netrw_liststyle=3 " tree view
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
-
-let g:onedark_hide_endofbuffer=0
-let g:onedark_terminal_italics=1
-let g:onedark_termcolors=256
-let g:onedark_color_overrides = { "black": {"gui": "#272c33", "cterm": "0", "cterm16": "0" } }
 
 let active_left = [['mode', 'paste'], ['cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified']]
 let active_right = [['lineinfo', 'method', 'spell'], ['fileencoding', 'fileformat']]

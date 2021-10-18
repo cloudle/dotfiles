@@ -27,6 +27,7 @@ call plug#begin('~/.vim/plugged')
       \ Plug 'scrooloose/nerdtree-project-plugin', { 'on': 'NERDTreeToggle' }
 
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+  Plug 'luochen1990/rainbow'
   Plug 'jparise/vim-graphql'
   Plug 'cespare/vim-toml'
   Plug 'editorconfig/editorconfig-vim'
@@ -36,3 +37,5 @@ call plug#begin('~/.vim/plugged')
   Plug 'wellle/visual-split.vim'
   Plug 'mhinz/vim-startify'
 call plug#end()
+
+let g:rainbow_active = 1

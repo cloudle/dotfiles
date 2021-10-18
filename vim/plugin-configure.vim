@@ -3,17 +3,17 @@ let NERDTreeRespectWildIgnore=1
 let NERDTreeShowHidden=1
 let g:NERDTreeGitStatusUseNerdFonts = 1
 let g:NERDTreeGitStatusIndicatorMapCustom = {
-   \ 'Modified'  :'✹',
-   \ 'Staged'    :'✚',
-   \ 'Untracked' :'✗',
-   \ 'Renamed'   :'➜',
-   \ 'Unmerged'  :'═',
-   \ 'Deleted'   :'✖',
-   \ 'Dirty'     :'✭',
-   \ 'Ignored'   :'☒',
-   \ 'Clean'     :'✔︎',
-   \ 'Unknown'   :'?',
-   \ }
+  \ 'Modified'  :'✹',
+  \ 'Staged'    :'✚',
+  \ 'Untracked' :'✗',
+  \ 'Renamed'   :'➜',
+  \ 'Unmerged'  :'═',
+  \ 'Deleted'   :'✖',
+  \ 'Dirty'     :'✭',
+  \ 'Ignored'   :'☒',
+  \ 'Clean'     :'✔︎',
+  \ 'Unknown'   :'?',
+  \ }
 
 " Start NERDTree and put the cursor back in the other window.
 " autocmd VimEnter * NERDTree | wincmd p
@@ -28,12 +28,16 @@ endfunction
 command! ProjectFiles execute 'Files' s:find_git_root()
 
 let g:startify_lists = [
-          \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
-          \ { 'type': 'files',     'header': ['   MRU']            },
-          \ { 'type': 'sessions',  'header': ['   Sessions']       },
-          \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
-          \ { 'type': 'commands',  'header': ['   Commands']       },
-          \ ]
+  \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+  \ { 'type': 'files',     'header': ['   MRU']            },
+  \ { 'type': 'sessions',  'header': ['   Sessions']       },
+  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+  \ { 'type': 'commands',  'header': ['   Commands']       },
+  \ ]
+
+let g:rainbow_conf = {
+  \ 'guifgs': ['#555d70', '#d29a61', '#c774df', '#96c475', '#51b5c3'],
+\}
 
 if has('nvim')
   autocmd BufRead Cargo.toml call crates#toggle()

@@ -78,3 +78,9 @@ inoremap <leader>u :History<CR>
 map / <Plug>(incsearch-easymotion-/)
 map ? <Plug>(incsearch-easymotion-?)
 map g/ <Plug>(incsearch-easymotion-stay)
+
+nnoremap <leader>hf :SignifyFold<CR>
+nnoremap <leader>ht :SignifyToggle<CR>
+nnoremap <leader>hh :SignifyToggleHighlight<CR>
+nnoremap <leader>hd :SignifyHunkDiff<CR>
+nnoremap <leader>hu :SignifyHunkUndo<CR>

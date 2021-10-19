@@ -39,6 +39,11 @@ let g:rainbow_conf = {
   \ 'guifgs': ['#555d70', '#d29a61', '#c774df', '#96c475', '#51b5c3'],
 \}
 
+" Customize gutter's git status icon
+let g:signify_sign_add = ''
+let g:signify_sign_change = ''
+let g:signify_sign_delete = ''
+
 if has('nvim')
   autocmd BufRead Cargo.toml call crates#toggle()
 endif

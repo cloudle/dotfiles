@@ -26,10 +26,8 @@ call plug#begin('~/.vim/plugged')
       \ Plug 'ryanoasis/vim-devicons' |
       \ Plug 'scrooloose/nerdtree-project-plugin', { 'on': 'NERDTreeToggle' }
 
+  Plug 'sheerun/vim-polyglot'
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-  Plug 'luochen1990/rainbow'
-  Plug 'jparise/vim-graphql'
-  Plug 'cespare/vim-toml'
   Plug 'editorconfig/editorconfig-vim'
 
   Plug 'joshdick/onedark.vim'
@@ -38,4 +36,3 @@ call plug#begin('~/.vim/plugged')
   Plug 'mhinz/vim-startify'
 call plug#end()
 
-let g:rainbow_active = 1

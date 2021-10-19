@@ -14,7 +14,6 @@ source $ZSH/oh-my-zsh.sh
 source ~/dotfiles/zsh/nvmrc.sh
 source ~/dotfiles/zsh/keybindings.sh
 
-bindkey -v
 alias vim="nvim"
 # chpwd() ls
 

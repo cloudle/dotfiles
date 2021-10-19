@@ -1,0 +1,29 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "rust"],
+  "javascript.updateImportsOnFileMove.enable": true,
+  "typescript.updateImportsOnFileMove.enable": true,
+  "prettier.singleQuote": true,
+  "diagnostic.errorSign": "",
+  "diagnostic.warningSign": "",
+  "cSpell.userWords": [
+    "Xuyuanp",
+    "busa",
+    "cespare",
+    "ctermul",
+    "haya",
+    "itchyny",
+    "jiangmiao",
+    "jparise",
+    "junegunn",
+    "luochen",
+    "mhinz",
+    "neoclide",
+    "nzzzv",
+    "rockman",
+    "scrooloose",
+    "sheerun",
+    "startify",
+    "tpope",
+    "wellle"
+  ]
+}

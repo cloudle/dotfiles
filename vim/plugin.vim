@@ -36,3 +36,4 @@ call plug#begin('~/.vim/plugged')
   Plug 'mhinz/vim-startify'
 call plug#end()
 
+let g:coc_config_home = '~/dotfiles/conf/coc-settings.json'

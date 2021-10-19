@@ -4,13 +4,14 @@ set cursorline
 set relativenumber
 set noet ci pi sts=0 sw=2 ts=2
 set list
-set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,precedes:«,extends:»
+set listchars=tab:\ ,space:·,nbsp:␣,trail:•,precedes:«,extends:»
 
 source ~/dotfiles/vim/plugin.vim
 source ~/dotfiles/vim/plugin-configure.vim
 source ~/dotfiles/vim/fzf.vim
 source ~/dotfiles/vim/completion.vim
 source ~/dotfiles/vim/theme.vim
+source ~/dotfiles/vim/highlight.vim
 
 map <silent> <C-n> :NERDTreeToggle<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>

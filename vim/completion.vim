@@ -2,6 +2,7 @@ let g:coc_global_extensions = [
   \ 'coc-spell-checker',
   \ 'coc-json',
   \ 'coc-yaml',
+  \ 'coc-tabnine',
   \ 'coc-tsserver',
   \ 'coc-eslint',
   \ 'coc-prettier',

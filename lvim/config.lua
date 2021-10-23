@@ -1,35 +1,27 @@
+lvim.builtin.dashboard.custom_header = {
+   "                                   ",
+   "                                   ",
+   "                                   ",
+   "   ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣿⣶⣿⣦⣼⣆          ",
+   "    ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       ",
+   "          ⠈⢿⣿⣟⠦ ⣾⣿⣿⣷    ⠻⠿⢿⣿⣧⣄     ",
+   "           ⣸⣿⣿⢧ ⢻⠻⣿⣿⣷⣄⣀⠄⠢⣀⡀⠈⠙⠿⠄    ",
+   "          ⢠⣿⣿⣿⠈    ⣻⣿⣿⣿⣿⣿⣿⣿⣛⣳⣤⣀⣀   ",
+   "   ⢠⣧⣶⣥⡤⢄ ⣸⣿⣿⠘  ⢀⣴⣿⣿⡿⠛⣿⣿⣧⠈⢿⠿⠟⠛⠻⠿⠄  ",
+   "  ⣰⣿⣿⠛⠻⣿⣿⡦⢹⣿⣷   ⢊⣿⣿⡏  ⢸⣿⣿⡇ ⢀⣠⣄⣾⠄   ",
+   " ⣠⣿⠿⠛ ⢀⣿⣿⣷⠘⢿⣿⣦⡀ ⢸⢿⣿⣿⣄ ⣸⣿⣿⡇⣪⣿⡿⠿⣿⣷⡄  ",
+   " ⠙⠃   ⣼⣿⡟  ⠈⠻⣿⣿⣦⣌⡇⠻⣿⣿⣷⣿⣿⣿ ⣿⣿⡇ ⠛⠻⢷⣄ ",
+   "      ⢻⣿⣿⣄   ⠈⠻⣿⣿⣿⣷⣿⣿⣿⣿⣿⡟ ⠫⢿⣿⡆     ",
+   "       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ",
+   "                                   ",
+}
+lvim.builtin.dashboard.footer = { "cloudle" }
+
 -- lvim is the global options object
 lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.colorscheme = "onedarker"
 lvim.leader = "space"
-
-vim.cmd "au Colorscheme * hi Identifier guifg=#C678DD"
-vim.cmd "au Colorscheme * hi Function guifg=#E06C75"
-
-vim.cmd "au Colorscheme * hi TSType guifg=#98C379"
-vim.cmd "au Colorscheme * hi TSConditional guifg=#C678DD gui=italic"
-vim.cmd "au Colorscheme * hi TSKeyword guifg=#C678DD gui=italic"
-
-vim.cmd "au Colorscheme * hi jsxAttrib guifg=#E5C07B gui=italic"
-vim.cmd "au Colorscheme * hi typescriptTypeReference guifg=#98C379 gui=italic"
-
-vim.cmd "au Colorscheme * hi NvimTreeFolderName guifg=#ABB2Bf"
-vim.cmd "au Colorscheme * hi NvimTreeOpenedFolderName guifg=#ABB2Bf"
-vim.cmd "au Colorscheme * hi NvimTreeGitStaged guifg=#98C379"
-vim.cmd "au Colorscheme * hi NvimTreeGitNew guifg=#98C379"
-vim.cmd "au Colorscheme * hi NvimTreeGitDirty guifg=#61AFEF"
-vim.cmd "au Colorscheme * hi NvimTreeGitDeleted guifg=#5c6370"
-vim.cmd "au Colorscheme * hi NvimTreeGitMerge guifg=#61AFEF"
-vim.cmd "au Colorscheme * hi NvimTreeGitRename guifg=#61AFEF"
-
---[[
-Linters should be
-filled in as strings with either
-a global executable or a path to
-an executable
-]]
--- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
@@ -102,49 +94,6 @@ lvim.builtin.treesitter.ensure_installed = {
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
--- generic LSP settings
--- you can set a custom on_attach function that will be used for all the language servers
--- See <https://github.com/neovim/nvim-lspconfig#keybindings-and-completion>
--- lvim.lsp.on_attach_callback = function(client, bufnr)
---   local function buf_set_option(...)
---     vim.api.nvim_buf_set_option(bufnr, ...)
---   end
---   --Enable completion triggered by <c-x><c-o>
---   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
--- end
--- you can overwrite the null_ls setup table (useful for setting the root_dir function)
--- lvim.lsp.null_ls.setup = {
---   root_dir = require("lspconfig").util.root_pattern("Makefile", ".git", "node_modules"),
--- }
--- or if you need something more advanced
--- lvim.lsp.null_ls.setup.root_dir = function(fname)
---   if vim.bo.filetype == "javascript" then
---     return require("lspconfig/util").root_pattern("Makefile", ".git", "node_modules")(fname)
---       or require("lspconfig/util").path.dirname(fname)
---   elseif vim.bo.filetype == "php" then
---     return require("lspconfig/util").root_pattern("Makefile", ".git", "composer.json")(fname) or vim.fn.getcwd()
---   else
---     return require("lspconfig/util").root_pattern("Makefile", ".git")(fname) or require("lspconfig/util").path.dirname(fname)
---   end
--- end
-
--- set a formatter if you want to override the default lsp one (if it exists)
--- lvim.lang.typescript.formatters = { { exe = "prettier" } }
--- lvim.lang.typescriptreact.formatters = lvim.lang.typescript.formatters
--- lvim.lang.rust.formatters = { { exe = "rustfmt" } }
-
--- lvim.lang.python.formatters = {
---   {
---     exe = "black",
---   }
--- }
--- set an additional linter
--- lvim.lang.python.linters = {
---   {
---     exe = "flake8",
---   }
--- }
-
 -- Additional Plugins
 lvim.plugins = {
   {
@@ -156,6 +105,10 @@ lvim.plugins = {
     config = function()
       require("autosave").setup()
     end,
+  },
+  {
+  "ggandor/lightspeed.nvim",
+    event = "BufRead",
   },
   {
     "folke/persistence.nvim",
@@ -310,6 +263,8 @@ lvim.plugins = {
 lvim.builtin.telescope.defaults.prompt_prefix = "   "
 lvim.builtin.telescope.defaults.selection_caret = " "
 
+vim.g.nvim_tree_indent_markers = 1
+lvim.builtin.nvimtree.root_folder_modifier = table.concat { ":t:gs?$?/..", string.rep(" ", 1000), "?:gs?^??" }
 lvim.builtin.nvimtree.icons = {
   default = "",
   symlink = "",
@@ -333,3 +288,34 @@ lvim.builtin.nvimtree.icons = {
     symlink_open = "",
   },
 }
+
+vim.cmd "au Colorscheme * hi Identifier guifg=#C678DD"
+vim.cmd "au Colorscheme * hi Function guifg=#E06C75"
+
+vim.cmd "au Colorscheme * hi TSType guifg=#98C379"
+vim.cmd "au Colorscheme * hi TSConditional guifg=#C678DD gui=italic"
+vim.cmd "au Colorscheme * hi TSKeyword guifg=#C678DD gui=italic"
+
+vim.cmd "au Colorscheme * hi jsxAttrib guifg=#E5C07B gui=italic"
+vim.cmd "au Colorscheme * hi typescriptTypeReference guifg=#98C379 gui=italic"
+
+vim.cmd "au Colorscheme * hi NvimTreeFolderName guifg=#ABB2Bf"
+vim.cmd "au Colorscheme * hi NvimTreeOpenedFolderName guifg=#ABB2Bf"
+vim.cmd "au Colorscheme * hi NvimTreeGitStaged guifg=#98C379"
+vim.cmd "au Colorscheme * hi NvimTreeGitNew guifg=#98C379"
+vim.cmd "au Colorscheme * hi NvimTreeGitDirty guifg=#61AFEF"
+vim.cmd "au Colorscheme * hi NvimTreeGitDeleted guifg=#5c6370"
+vim.cmd "au Colorscheme * hi NvimTreeGitMerge guifg=#61AFEF"
+vim.cmd "au Colorscheme * hi NvimTreeGitRename guifg=#61AFEF"
+
+vim.cmd "au Colorscheme * hi NvimTreeGitRename guifg=#61AFEF"
+
+vim.cmd "au ColorScheme * hi NvimTreeRootFolder guifg=#E06C75 gui=underline"
+vim.cmd "au ColorScheme * hi Normal guibg=#1e222a"
+vim.cmd "au ColorScheme * hi NormalNC guibg=#1e222a" -- background for inactive window
+vim.cmd "au ColorScheme * hi SignColumn guibg=#1e222a" -- background for inactive window
+vim.cmd "au ColorScheme * hi NvimTreeNormal guibg=#1b1f27" -- background of vim.tree
+vim.cmd "au ColorScheme * hi NvimTreeNormalNC guibg=#1b1f27"
+vim.cmd "au ColorScheme * hi NvimTreeVertSplit guibg=#1b1f27 guifg=#1b1f27"
+vim.cmd "au ColorScheme * hi StatusLineNC guifg=#1b1f27"
+-- vim.cmd "au ColorScheme * hi StatusLine guifg=#1b1f27"

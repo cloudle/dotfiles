@@ -10,5 +10,8 @@ vim.api.nvim_exec(
   false
 )
 
-vim.g.onedark_terminal_italics = 2
-vim.cmd [[colorscheme onedark]]
+-- vim.g.onedark_terminal_italics = 2
+-- vim.cmd [[colorscheme onedark]]
+vim.g.colors_name = "stormone"
+vim.cmd "colorscheme stormone"
+

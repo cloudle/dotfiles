@@ -14,9 +14,9 @@ return {
   -- { "sheerun/vim-polyglot" },
   { "tpope/vim-fugitive" },
   { "joshdick/onedark.vim" },
+  { "kyazdani42/nvim-web-devicons" },
   {
     'kyazdani42/nvim-tree.lua',
-    requires = 'kyazdani42/nvim-web-devicons',
     config = function()
       require("engine.plugins.nvimtree"):setup()
     end,
@@ -83,6 +83,34 @@ return {
       require("engine.plugins.gitsigns").setup()
     end,
     event = "BufRead",
+  },
+  {
+    "norcalli/nvim-colorizer.lua",
+    config = function()
+      require("colorizer").setup({ "*" }, {
+        RGB = true, -- #RGB hex codes
+        RRGGBB = true, -- #RRGGBB hex codes
+        RRGGBBAA = true, -- #RRGGBBAA hex codes
+        rgb_fn = true, -- CSS rgb() and rgba() functions
+        hsl_fn = true, -- CSS hsl() and hsla() functions
+        css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+        css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
+      })
+    end,
+  },  
+  {
+    "p00f/nvim-ts-rainbow",
+    config = function()
+      require'nvim-treesitter.configs'.setup {
+        rainbow = {
+          enable = true,
+          extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
+          max_file_lines = nil, -- Do not enable for files with more than n lines, int
+          -- colors = {}, -- table of hex strings
+          -- termcolors = {} -- table of colour name strings
+        }
+      }
+    end,
   },
 }
 

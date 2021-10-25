@@ -2,6 +2,7 @@ local M = {}
 
 vim.g.coq_settings = {
   auto_start = "shut-up",
+  keymap = { recommended = false },
   clients = {
     tabnine = { enabled = true }
   },
@@ -9,7 +10,6 @@ vim.g.coq_settings = {
 
 M.setup = function()
   local installer = require("nvim-lsp-installer")
-  -- local lsp = require("lspconfig")
   local coq = require("coq")
 
   installer.on_server_ready(function(server)

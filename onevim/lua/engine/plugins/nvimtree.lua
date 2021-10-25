@@ -5,11 +5,11 @@ local config = {
     open_onsetup = false,
     auto_close = true,
     open_on_tab = true,
-    update_cwd =true,
+    update_cwd = true,
     update_focused_file = {
       enable = true,
       update_cwd = false,
-    }, 
+    },
     diagnostics = {
       enable = true,
       icons = {
@@ -78,7 +78,7 @@ M.setup = function()
     M.on_open()
     tree_open()
   end
-  
+
   vim.cmd "au WinClosed * lua require('engine.plugins.nvimtree').on_close()"
 
   require("nvim-tree").setup(config.setup)

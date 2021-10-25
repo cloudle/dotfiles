@@ -18,7 +18,13 @@ return {
     requires = 'kyazdani42/nvim-web-devicons',
     config = function()
       require("engine.plugins.nvimtree"):setup()
-    end
+    end,
+  },
+  {
+    "windwp/nvim-autopairs",
+    config = function()
+      require("engine.plugins.autopairs"):setup()
+    end,
   },
   {
     "romgrk/barbar.nvim",
@@ -27,9 +33,7 @@ return {
   {
     "ms-jpq/coq_nvim",
     branch = "coq",
-    -- config = function()
-    --   require("engine.plugins.coq"):setup()
-    -- end
+    -- see settings for Coq under engine.lsp
   },
   {
     "ms-jpq/coq.artifacts",

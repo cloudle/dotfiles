@@ -10,6 +10,7 @@ return {
     end,
   },
   { "wakatime/vim-wakatime" },
+  { "nvim-lua/plenary.nvim" },
   -- { "sheerun/vim-polyglot" },
   { "tpope/vim-fugitive" },
   { "joshdick/onedark.vim" },
@@ -41,10 +42,10 @@ return {
   },
   {
     "folke/which-key.nvim",
-    event = "BufWinEnter",
     config = function()
       require("engine.keywhichs"):setup()
-    end
+    end,
+    event = "BufWinEnter",
   },
   {
     "max397574/better-escape.nvim",
@@ -54,10 +55,10 @@ return {
   },
   {
     "numToStr/Comment.nvim",
-    event = "BufRead",
     config = function()
       require("engine.plugins.comment"):setup()
-    end
+    end,
+    event = "BufRead",
   },
   {
     "Pocco81/AutoSave.nvim",
@@ -71,10 +72,17 @@ return {
   },
   {
     "lukas-reineke/indent-blankline.nvim",
-    event = "BufRead",
     config = function()
       require("engine.plugins.blankline"):setup()
-    end
+    end,
+    event = "BufRead",
+  },
+  {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require("engine.plugins.gitsigns").setup()
+    end,
+    event = "BufRead",
   },
 }
 

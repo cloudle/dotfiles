@@ -32,10 +32,11 @@ M.setup = function()
 
   -- collaboration with nvim.coq
   utils.mode_keys("i", {
-    ["<esc>"] = [[pumvisible() ? "<c-e><esc>" : "<esc>"]],
-    ["<c-c>"] = [[pumvisible() ? "<c-e><c-c>" : "<c-c>"]],
-    ["<Tab>"] = [[pumvisible() ? "<c-n>" : "<Tab>"]],
-    ["<s-Tab>"] = [[pumvisible() ? "<c-p>" : "<bs>"]],
+    ["<esc>"] = [[pumvisible() ? "<C-e><esc>" : "<Esc>"]],
+    ["<c-c>"] = [[pumvisible() ? "<C-e><C-c>" : "<C-c>"]],
+    ["<Tab>"] = [[pumvisible() ? (complete_info().selected == -1 ? "<Down><CR>" : "<C-n>") : "<Tab>"]],
+    -- ["<Tab>"] = [[pumvisible() ? "<C-n>" : "<Tab>"]],
+    ["<s-Tab>"] = [[pumvisible() ? "<C-p>" : "<bs>"]],
     ["<cr>"] = [[v:lua.MUtils.CR()]],
     ["<bs>"] = [[v:lua.MUtils.BS()]],
   }, { expr = true, noremap = true })

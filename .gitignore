@@ -1,3 +1,5 @@
 .DS_Store
 .idea
 lvim/plugin
+onevim/plugin
+onevim/session

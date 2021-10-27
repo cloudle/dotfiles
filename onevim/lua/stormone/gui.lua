@@ -17,7 +17,7 @@ return {
   NvimTreeGitMerge = { fg = C.sign_change },
   NvimTreeGitRenamed = { fg = C.sign_change },
   NvimTreeSymlink = { fg = C.cyan },
-  NvimTreeRootFolder = { fg = C.fg, style = "bold" },
+  NvimTreeRootFolder = { fg = C.red, style = "underline" },
   NvimTreeExecFile = { fg = C.green },
   LirFloatNormal = { fg = C.light_gray, bg = C.alt_bg },
   LirDir = { fg = C.blue },

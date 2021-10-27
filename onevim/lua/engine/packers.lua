@@ -22,9 +22,21 @@ return {
     end,
   },
   {
+    "nvim-telescope/telescope.nvim",
+    config = function()
+      require("engine.plugins.telescope"):setup()
+    end,
+  },
+  {
     "windwp/nvim-autopairs",
     config = function()
       require("engine.plugins.autopairs"):setup()
+    end,
+  },
+  {
+   "nvim-lualine/lualine.nvim",
+    config = function()
+      require("engine.plugins.statusline"):setup()
     end,
   },
   {
@@ -110,6 +122,19 @@ return {
           -- termcolors = {} -- table of colour name strings
         }
       }
+    end,
+  },
+  {
+  	"ethanholz/nvim-lastplace",
+  	event = "BufRead",
+    config = function()
+      require("nvim-lastplace").setup({
+        lastplace_ignore_buftype = { "quickfix", "nofile", "help" },
+        lastplace_ignore_filetype = {
+          "gitcommit", "gitrebase", "svn", "hgcommit",
+        },
+        lastplace_open_folds = true,
+      })
     end,
   },
 }

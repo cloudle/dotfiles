@@ -28,6 +28,10 @@ return {
     end,
   },
   {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    run = "make",
+  },
+  {
     "windwp/nvim-autopairs",
     config = function()
       require("engine.plugins.autopairs"):setup()

@@ -29,12 +29,13 @@ M.setup = function()
   if not ok then return end
 
   autopairs.setup()
+  autopairs.add_rules(require("nvim-autopairs.rules.endwise-lua"))
 
   -- collaboration with nvim.coq
   utils.mode_keys("i", {
     ["<esc>"] = [[pumvisible() ? "<C-e><esc>" : "<Esc>"]],
     ["<c-c>"] = [[pumvisible() ? "<C-e><C-c>" : "<C-c>"]],
-    ["<Tab>"] = [[pumvisible() ? (complete_info().selected == -1 ? "<Down><CR>" : "<C-n>") : "<Tab>"]],
+    ["<Tab>"] = [[pumvisible() ? (complete_info().selected == -1 ? "<Down><CR>" : "<CR>") : "<Tab>"]],
     -- ["<Tab>"] = [[pumvisible() ? "<C-n>" : "<Tab>"]],
     ["<s-Tab>"] = [[pumvisible() ? "<C-p>" : "<bs>"]],
     ["<cr>"] = [[v:lua.MUtils.CR()]],

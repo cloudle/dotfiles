@@ -13,10 +13,10 @@ local config = {
     diagnostics = {
       enable = true,
       icons = {
-        hint = "H",
-        info = "I",
-        warning = "W",
-        error = "E",
+        hint = "",
+        info = "",
+        warning = "",
+        error = "",
       },
     },
     view = {
@@ -53,7 +53,7 @@ local config = {
     },
   },
   show_icons = {
-    git = 1,
+    git = 0,
     folders = 1,
     files = 1,
     folder_arrows = 1,
@@ -65,10 +65,10 @@ M.setup = function()
   vim.g.nvim_tree_icons = config.icons
   vim.g.nvim_tree_show_icons = config.show_icons
   vim.g.nvim_tree_ignore = config.ignore
-  vim.g.nvim_tree_gitignore = 1
   vim.g.nvim_tree_hide_dotfiles = 1
   vim.g.nvim_tree_git_hl = 1
   vim.g.nvim_tree_allow_resize = 1
+  vim.g.nvim_tree_auto_ignore_ft = { "startify", "dashboard" }
   vim.g.nvim_tree_indent_markers = 1
   vim.g.nvim_tree_root_folder_modifier = table.concat { ":t:gs?$?/..", string.rep(" ", 1000), "?:gs?^??" }
 

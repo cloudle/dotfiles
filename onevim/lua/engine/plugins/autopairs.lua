@@ -25,6 +25,18 @@ MUtils.BS = function()
   end
 end
 
+MUtils.Tab = function(fallback)
+  if vim.fn.pumvisible() ~= 0 then
+    if vim.fn.complete_info().selected == -1 then
+      return autopairs.esc('<Down><CR>')
+    else
+      return autopairs.esc('<CR>')
+    end
+  else
+    return autopairs.esc('<Tab>')
+  end
+end
+
 M.setup = function()
   if not ok then return end
 
@@ -35,13 +47,11 @@ M.setup = function()
   utils.mode_keys("i", {
     ["<esc>"] = [[pumvisible() ? "<C-e><esc>" : "<Esc>"]],
     ["<c-c>"] = [[pumvisible() ? "<C-e><C-c>" : "<C-c>"]],
-    ["<Tab>"] = [[pumvisible() ? (complete_info().selected == -1 ? "<Down><CR>" : "<CR>") : "<Tab>"]],
-    -- ["<Tab>"] = [[pumvisible() ? "<C-n>" : "<Tab>"]],
     ["<s-Tab>"] = [[pumvisible() ? "<C-p>" : "<bs>"]],
+    ["<Tab>"] = [[v:lua.MUtils.Tab()]],
     ["<cr>"] = [[v:lua.MUtils.CR()]],
     ["<bs>"] = [[v:lua.MUtils.BS()]],
   }, { expr = true, noremap = true })
 end
 
 return M
-

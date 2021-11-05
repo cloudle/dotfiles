@@ -1,17 +1,17 @@
 local C = require("stormone.colors")
 
 return {
-  SignAdd = { fg = C.sign_add },
-  SignChange = { fg = C.sign_change },
+  SignAdd = { fg = C.green },
+  SignChange = { fg = C.blue },
   SignDelete = { fg = C.sign_delete },
-  GitSignsAdd = { fg = C.sign_add },
-  GitSignsChange = { fg = C.sign_change },
+  GitSignsAdd = { fg = C.green },
+  GitSignsChange = { fg = C.blue },
   GitSignsDelete = { fg = C.sign_delete },
 
   DiffViewNormal = { fg = C.gray, bg = C.alt_bg },
-  DiffviewStatusAdded = { fg = C.sign_add },
-  DiffviewStatusModified = { fg = C.sign_change },
-  DiffviewStatusRenamed = { fg = C.sign_change },
+  DiffviewStatusAdded = { fg = C.green },
+  DiffviewStatusModified = { fg = C.blue },
+  DiffviewStatusRenamed = { fg = C.cyan },
   DiffviewStatusDeleted = { fg = C.sign_delete },
   DiffviewFilePanelInsertion = { fg = C.sign_add },
   DiffviewFilePanelDeletion = { fg = C.sign_delete },

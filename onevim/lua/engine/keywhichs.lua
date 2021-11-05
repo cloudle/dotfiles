@@ -45,7 +45,8 @@ local config = {
     T = {
       name = "Treesitter",
       i = { ":TSConfigInfo<CR>", "Info" },
-      h = { "<cmd>TSHighlightCapturesUnderCursor<CR>", "Hi info" }
+      h = { "<cmd>TSHighlightCapturesUnderCursor<CR>", "Highlight under cursor" },
+      p = { "<cmd>TSPlaygroundToggle<CR>", "Playground" },
     },
     p = {
       name = "Packer",

@@ -2,12 +2,18 @@ return {
   { "wbthomason/packer.nvim" },
   { "neovim/nvim-lspconfig" },
   { "williamboman/nvim-lsp-installer" },
+  { "jose-elias-alvarez/null-ls.nvim" },
+  { "ray-x/lsp_signature.nvim" },
   {
     "nvim-treesitter/nvim-treesitter",
     branch = "0.5-compat",
     config = function()
       require("engine.plugins.treesitter").setup()
     end,
+  },
+  {
+    "nvim-treesitter/playground",
+    event = "BufRead",
   },
   { "wakatime/vim-wakatime" },
   { "nvim-lua/plenary.nvim" },
@@ -32,6 +38,17 @@ return {
     run = "make",
   },
   {
+    "rmagatti/goto-preview",
+    config = function()
+      require("goto-preview").setup({
+        width = 120,
+        height = 25,
+        default_mappings = true,
+      })
+    end,
+    event = "BufRead"
+  },
+  {
     "windwp/nvim-autopairs",
     config = function()
       require("engine.plugins.autopairs"):setup()
@@ -47,6 +64,20 @@ return {
     "romgrk/barbar.nvim",
     event = "BufWinEnter",
   },
+  -- {
+  --   "hrsh7th/nvim-cmp",
+  --   requires = {
+  --     "hrsh7th/cmp-nvim-lsp",
+  --     "hrsh7th/cmp-buffer",
+  --     "hrsh7th/cmp-path",
+  --     "hrsh7th/cmp-cmdline",
+  --     "hrsh7th/cmp-vsnip",
+  --     "hrsh7th/vim-vsnip",
+  --   },
+  --   config = function()
+  --     require("engine.plugins.cmp"):setup()
+  --   end,
+  -- },
   {
     "ms-jpq/coq_nvim",
     branch = "coq",
@@ -56,6 +87,7 @@ return {
     "ms-jpq/coq.artifacts",
     branch = "artifacts",
   },
+  { "github/copilot.vim" },
   {
     "folke/which-key.nvim",
     config = function()
@@ -94,6 +126,28 @@ return {
     event = "BufRead",
   },
   {
+    "phaazon/hop.nvim",
+    config = function()
+      require("hop"):setup()
+    end,
+    event = "BufRead",
+  },
+  {
+    "kevinhwang91/nvim-hlslens",
+    config = function()
+      require("hlslens").setup({
+        calm_down = true,
+        nearest_only = true,
+        nearest_float_when = "always",
+      })
+    end,
+    event = "BufRead"
+  },
+  {
+    "windwp/nvim-spectre",
+    event = "BufRead",
+  },
+  {
     "lewis6991/gitsigns.nvim",
     config = function()
       require("engine.plugins.gitsigns").setup()
@@ -113,7 +167,7 @@ return {
         css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
       })
     end,
-  },  
+  },
   {
     "p00f/nvim-ts-rainbow",
     config = function()

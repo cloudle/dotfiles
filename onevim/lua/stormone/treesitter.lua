@@ -31,7 +31,7 @@ return {
   TSFuncMacro = { fg = C.blue },
   TSProperty = { fg = C.cyan },
   TSOperator = { fg = C.purple },
-  TSField = { fg = C.blue },
+  TSField = { fg = C.red }, -- C.blue
   TSParameter = { fg = C.red },
   TSParameterReference = { fg = C.red },
   TSVariable = { fg = C.fg },

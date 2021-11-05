@@ -1,21 +1,19 @@
 local M = {}
-
-vim.g.coq_settings = {
-  auto_start = "shut-up",
-  keymap = { recommended = false },
-  clients = {
-    tabnine = { enabled = true }
-  },
+local utils = require("engine.lsp.utils")
+local providers = {
+  sumneko_lua = require("engine.lsp.providers.sumneko-lua"),
+  tsserver = require("engine.lsp.providers.tsserver"),
+  terraformls = require("engine.lsp.providers.terraformls"),
 }
 
 M.setup = function()
-  local installer = require("nvim-lsp-installer")
-  local coq = require("coq")
+  vim.g.coq_settings = utils.coq_settings
 
-  installer.on_server_ready(function(server)
-    local capabilities = coq.lsp_ensure_capabilities()
-    server:setup(capabilities)
-  end)
+  for name, options in pairs(providers) do
+    utils.configure_server(name, options)
+  end
+
+  require("engine.lsp.null-ls"):setup()
 end
 
 return M

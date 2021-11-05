@@ -6,6 +6,7 @@ local config = {
     auto_close = true,
     open_on_tab = true,
     update_cwd = true,
+    ignore_ft_on_setup = { "startify", "dashboard" },
     update_focused_file = {
       enable = true,
       update_cwd = false,
@@ -20,12 +21,15 @@ local config = {
       },
     },
     view = {
-      width = 30,
+      width = 34,
       side = "left",
       auto_resize = false,
       mappings = {
         custom_only = false,
       },
+    },
+    filters = {
+      dotfiles = true,
     },
   },
   ignore = { ".git", "node_modules", ".cache", ".idea" },
@@ -57,18 +61,14 @@ local config = {
     folders = 1,
     files = 1,
     folder_arrows = 1,
-    tree_width = 30,
+    tree_width = 34,
   },
 }
 
 M.setup = function()
   vim.g.nvim_tree_icons = config.icons
   vim.g.nvim_tree_show_icons = config.show_icons
-  vim.g.nvim_tree_ignore = config.ignore
-  vim.g.nvim_tree_hide_dotfiles = 1
   vim.g.nvim_tree_git_hl = 1
-  vim.g.nvim_tree_allow_resize = 1
-  vim.g.nvim_tree_auto_ignore_ft = { "startify", "dashboard" }
   vim.g.nvim_tree_indent_markers = 1
   vim.g.nvim_tree_root_folder_modifier = table.concat { ":t:gs?$?/..", string.rep(" ", 1000), "?:gs?^??" }
 
@@ -86,7 +86,7 @@ end
 
 function M.on_open()
   if package.loaded["bufferline.state"] then
-    require("bufferline.state").set_offset(31, "")
+    require("bufferline.state").set_offset(35, "")
   end
 end
 

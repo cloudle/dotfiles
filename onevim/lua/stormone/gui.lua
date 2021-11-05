@@ -2,7 +2,7 @@ local C = require("stormone.colors")
 
 return {
   NvimTreeFolderIcon = { fg = C.blue },
-  NvimTreeIndentMarker = { fg = C.gray },
+  NvimTreeIndentMarker = { fg = C.dark_gray },
   NvimTreeNormal = { fg = C.light_gray, bg = C.darker_bg },
   NvimTreeVertSplit = { fg = C.darker_bg, bg = C.darker_bg },
   NvimTreeFolderName = { fg = C.light_gray },
@@ -14,11 +14,15 @@ return {
   NvimTreeGitNew = { fg = C.green },
   NvimTreeGitDirty = { fg = C.blue },
   NvimTreeGitDeleted = { fg = C.gray },
-  NvimTreeGitMerge = { fg = C.blue },
+  NvimTreeGitMerge = { fg = C.red },
   NvimTreeGitRenamed = { fg = C.blue },
+  NvimTreeGitIgnored = { fg = C.dark_gray, style = "bold" },
   NvimTreeSymlink = { fg = C.cyan },
   NvimTreeRootFolder = { fg = C.red, style = "underline" },
   NvimTreeExecFile = { fg = C.green },
+  NvimTreeStatusLine = { fg = C.darker_bg },
+  NvimTreeStatusLineNC = { fg = C.darker_bg },
+  BufferOffset = { bg = C.darker_bg },
   LirFloatNormal = { fg = C.light_gray, bg = C.alt_bg },
   LirDir = { fg = C.blue },
   LirSymLink = { fg = C.cyan },
@@ -65,9 +69,9 @@ return {
   TelescopeBorder = { fg = C.cyan, bg = C.bg },
   TelescopePromptPrefix = { fg = C.purple },
 
-  WhichKey = { fg = C.hint_blue },
+  WhichKey = { fg = C.red },
   WhichKeySeperator = { fg = C.gray },
-  WhichKeyGroup = { fg = C.light_red },
-  WhichKeyDesc = { fg = C.red },
+  WhichKeyGroup = { fg = C.fg },
+  WhichKeyDesc = { fg = C.gray },
   WhichKeyFloat = { bg = C.dark },
  }

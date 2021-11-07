@@ -4,6 +4,7 @@ return {
   { "williamboman/nvim-lsp-installer" },
   { "jose-elias-alvarez/null-ls.nvim" },
   { "ray-x/lsp_signature.nvim" },
+  { "jose-elias-alvarez/nvim-lsp-ts-utils" },
   {
     "nvim-treesitter/nvim-treesitter",
     branch = "0.5-compat",

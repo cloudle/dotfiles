@@ -22,6 +22,8 @@ return {
   { "tpope/vim-fugitive" },
   { "joshdick/onedark.vim" },
   { "kyazdani42/nvim-web-devicons" },
+  { "andymass/vim-matchup" },
+  { "itchyny/vim-cursorword" },
   {
     'kyazdani42/nvim-tree.lua',
     config = function()

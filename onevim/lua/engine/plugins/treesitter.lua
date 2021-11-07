@@ -6,7 +6,10 @@ M.config = {
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = true,
-  }
+  },
+  matchup = {
+    enable = true,
+  },
 }
 
 M.setup = function()
